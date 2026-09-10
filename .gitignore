@@ -1,0 +1,17 @@
+# Sorties générées par le notebook/script (Excel, CSV, txt, HTML, PNG).
+# Les 4 images "clés" utilisées dans ce README (figure/0*-*.png) restent
+# suivies telles quelles : gitignore n'affecte pas les fichiers déjà commités.
+figure/
+table/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store

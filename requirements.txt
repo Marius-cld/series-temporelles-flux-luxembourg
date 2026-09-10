@@ -1,0 +1,7 @@
+eurostat
+numpy
+pandas
+matplotlib
+seaborn
+statsmodels
+openpyxl
