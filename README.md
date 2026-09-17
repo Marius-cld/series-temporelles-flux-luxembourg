@@ -4,7 +4,7 @@
 
 Projet réalisé dans le cadre du Master 1 Économie (EADE), sous la supervision d'Anna Tykhonenko et Thomas Jobert.
 
-![Flux commerciaux du Luxembourg 1995-2024](figure/01-flux-commerciaux-1995-2024.png)
+![Flux commerciaux du Luxembourg 1995-2024](figures/01-flux-commerciaux-1995-2024.png)
 
 ## Contexte
 
@@ -27,8 +27,8 @@ Le Luxembourg est l'une des économies les plus ouvertes au monde (taux d'ouvert
 3. **Cointégration (approche Engle-Granger)** : régression MCO des exportations sur les importations (et inversement), puis étude de la stationnarité des résidus pour établir l'existence d'une relation d'équilibre de long terme.
 4. **Modèle correcteur d'erreur (VECM)** : estimation d'un VECM(2) intégrant la relation de cointégration, utilisé pour produire les prévisions.
 
-![ACF et PACF des exportations](figure/02-acf-pacf-exportations.png)
-![Résidus de la régression de cointégration](figure/03-residus-cointegration-exp-imp.png)
+![ACF et PACF des exportations](figures/02-acf-pacf-exportations.png)
+![Résidus de la régression de cointégration](figures/03-residus-cointegration-exp-imp.png)
 
 ## Résultats clés
 
@@ -37,7 +37,7 @@ Le Luxembourg est l'une des économies les plus ouvertes au monde (taux d'ouvert
 - **Cointégration** : les résidus de la régression exportations/importations sont stationnaires, ce qui confirme l'existence d'une **relation d'équilibre de long terme** entre les deux séries — d'où le passage à un modèle VECM plutôt qu'un simple VAR en différences.
 - **VECM(2)** : le coefficient de rappel à l'équilibre (force de correction d'erreur) est plus élevé sur l'équation des exportations, indiquant qu'elles sont plus sensibles que les importations aux déséquilibres passés.
 
-![Prévisions VECM](figure/04-previsions-vecm.png)
+![Prévisions VECM](figures/04-previsions-vecm.png)
 
 ## Limites
 
@@ -53,12 +53,12 @@ Python · [statsmodels](https://www.statsmodels.org/) (VAR, VECM, tests ADF/Gran
 
 ```
 .
-├── notebook/
+├── notebooks/
 │   └── analyse-commerce-exterieur-luxembourg.ipynb   # analyse complète, narrative
 ├── src/
 │   └── analyse-commerce-exterieur-luxembourg.py      # équivalent script de l'analyse
-├── figure/                                           # graphiques générés — 4 images clés suivies, le reste gitignoré
-├── table/                                            # tableaux de résultats générés (FAC/FAP, régressions, VECM...) — gitignoré
+├── figures/                                          # graphiques générés — 4 images clés suivies, le reste gitignoré
+├── tables/                                           # tableaux de résultats générés (FAC/FAP, régressions, VECM...) — gitignoré
 ├── docs/
 │   └── rapport-projet-series-temporelles.pdf          # rapport académique complet
 ├── requirements.txt
@@ -69,12 +69,12 @@ Python · [statsmodels](https://www.statsmodels.org/) (VAR, VECM, tests ADF/Gran
 
 ```bash
 pip install -r requirements.txt
-jupyter notebook notebook/analyse-commerce-exterieur-luxembourg.ipynb
+jupyter notebook notebooks/analyse-commerce-exterieur-luxembourg.ipynb
 # ou, de façon équivalente :
 python src/analyse-commerce-exterieur-luxembourg.py
 ```
 
-L'analyse récupère les données directement depuis l'API Eurostat : aucun fichier de données local n'est nécessaire. Les fichiers générés (Excel, CSV, HTML, graphiques) sont écrits dans `figure/` et `table/`, créés automatiquement.
+L'analyse récupère les données directement depuis l'API Eurostat : aucun fichier de données local n'est nécessaire. Les fichiers générés (Excel, CSV, HTML, graphiques) sont écrits dans `figures/` et `tables/`, créés automatiquement.
 
 ## Rapport complet
 

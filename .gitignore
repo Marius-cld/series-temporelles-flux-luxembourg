@@ -1,8 +1,8 @@
 # Sorties générées par le notebook/script (Excel, CSV, txt, HTML, PNG).
-# Les 4 images "clés" utilisées dans ce README (figure/0*-*.png) restent
+# Les 4 images "clés" utilisées dans ce README (figures/0*-*.png) restent
 # suivies telles quelles : gitignore n'affecte pas les fichiers déjà commités.
-figure/
-table/
+figures/
+tables/
 
 # Jupyter
 .ipynb_checkpoints/

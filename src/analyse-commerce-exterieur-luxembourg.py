@@ -21,8 +21,8 @@ from statsmodels.tsa.stattools import acf, grangercausalitytests, pacf
 from statsmodels.tsa.vector_ar.vecm import VECM
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-FIGURE_DIR = ROOT_DIR / "figure"
-TABLE_DIR = ROOT_DIR / "table"
+FIGURE_DIR = ROOT_DIR / "figures"
+TABLE_DIR = ROOT_DIR / "tables"
 
 CRISE_FIN_START = pd.Timestamp("2008-07-01")
 CRISE_FIN_END = pd.Timestamp("2010-06-30")
