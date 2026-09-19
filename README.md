@@ -34,7 +34,7 @@ Le Luxembourg est l'une des économies les plus ouvertes au monde (taux d'ouvert
 
 - Les deux séries sont **non stationnaires en niveau** mais stationnaires en différence première (bruit blanc sur les corrélogrammes différenciés).
 - **Causalité de Granger** : le passé des exportations aide à prévoir les exportations futures (relation positive), et il aide également à prévoir les importations futures. En revanche, le passé des importations ne prédit pas significativement les exportations ; il prédit en revanche négativement les importations futures.
-- **Cointégration** : les résidus de la régression exportations/importations sont stationnaires, ce qui confirme l'existence d'une **relation d'équilibre de long terme** entre les deux séries — d'où le passage à un modèle VECM plutôt qu'un simple VAR en différences.
+- **Cointégration** : les résidus de la régression exportations/importations sont stationnaires, ce qui confirme l'existence d'une **relation d'équilibre de long terme** entre les deux séries, d'où le passage à un modèle VECM plutôt qu'un simple VAR en différences.
 - **VECM(2)** : le coefficient de rappel à l'équilibre (force de correction d'erreur) est plus élevé sur l'équation des exportations, indiquant qu'elles sont plus sensibles que les importations aux déséquilibres passés.
 
 ![Prévisions VECM](figures/04-previsions-vecm.png)
@@ -57,8 +57,8 @@ Python · [statsmodels](https://www.statsmodels.org/) (VAR, VECM, tests ADF/Gran
 │   └── analyse-commerce-exterieur-luxembourg.ipynb   # analyse complète, narrative
 ├── src/
 │   └── analyse-commerce-exterieur-luxembourg.py      # équivalent script de l'analyse
-├── figures/                                          # graphiques générés — 4 images clés suivies, le reste gitignoré
-├── tables/                                           # tableaux de résultats générés (FAC/FAP, régressions, VECM...) — gitignoré
+├── figures/                                          # graphiques générés, 4 images clés suivies, le reste gitignoré
+├── tables/                                           # tableaux de résultats générés (FAC/FAP, régressions, VECM...), gitignoré
 ├── docs/
 │   └── rapport-projet-series-temporelles.pdf          # rapport académique complet
 ├── requirements.txt
